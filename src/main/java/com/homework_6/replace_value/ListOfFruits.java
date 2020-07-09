@@ -1,12 +1,12 @@
-package com.homework_6.task_2;
+package com.homework_6.replace_value;
 
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class TaskTwo {
+public class ListOfFruits {
     private ArrayList<String> strList;
 
-    public TaskTwo() {
+    public ListOfFruits() {
         this.strList = new ArrayList<>();
     }
 
@@ -14,14 +14,11 @@ public class TaskTwo {
         Collections.addAll(strList, str);
     }
 
-    public void replaceValue(String name1, String name2) {
-        if (!strList.contains(name1)) {
+    public void replaceValue(String currentName, String newName) {
+        if (!strList.contains(currentName)) {
             System.out.println("Value not present");
-        }
-        for (int i = 0; i < strList.size(); i++) {
-            if (strList.get(i).equals(name1)) {
-                strList.set(i, name2);
-            }
+        } else {
+            strList.set(strList.indexOf(currentName), newName);
         }
     }
 

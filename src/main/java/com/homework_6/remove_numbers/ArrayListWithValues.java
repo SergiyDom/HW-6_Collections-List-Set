@@ -1,14 +1,13 @@
-package com.homework_6.task_1;
+package com.homework_6.remove_numbers;
 
-import javax.swing.text.html.HTMLDocument;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 
-public class TaskOne {
+public class ArrayListWithValues {
     ArrayList<Integer> arrayList;
 
-    public TaskOne() {
+    public ArrayListWithValues() {
         this.arrayList = new ArrayList<>();
     }
 
@@ -25,16 +24,10 @@ public class TaskOne {
     }
 
     public void removeDivisible(int divisibleNumb) {
-//        ArrayList<Integer> resultArr = new ArrayList<>();
-//        for (int i = 0; i < arrayList.size(); i++) {
-//            if (arrayList.get(i) % 3 != 0) {
-//                resultArr.add(arrayList.get(i));
-//            }
-//        }
         Iterator iterator = arrayList.iterator();
         while (iterator.hasNext()) {
             if ((int) iterator.next() % divisibleNumb == 0) {
-            iterator.remove();
+                iterator.remove();
             }
         }
     }
